@@ -142,11 +142,11 @@ classITG3200.measureGyro = function(callback) {
 			}
 
 			// Measure gyro heading
-			var currentTime = process.hrtime()[1] * 1000;
-			console.log(currentTime);
+			var currentTime = parseInt(process.hrtime()[1] / 1000);
+			var delta = ((currentTime - globVar.gyroLastMesuredTime) / 1000000.0);
 			//we want microseconds, process.hrtime give [seconds, nanosec], 1 microsec = 1000 nanosec
 			if (globVar.gyroRate[ZAXIS] > Math.radians(1.0) || globVar.gyroRate[ZAXIS] < Math.radians(-1.0)) {
-				globVar.gyroHeading += globVar.gyroRate[ZAXIS] * ((currentTime - globVar.gyroLastMesuredTime) / 1000000.0);
+				globVar.gyroHeading += globVar.gyroRate[ZAXIS] * delta;
 			}
 			globVar.gyroLastMesuredTime = currentTime;
 			callback(null);
