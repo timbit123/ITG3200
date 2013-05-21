@@ -1,0 +1,24 @@
+{
+  "name": "ITG3200",
+  "version": "0.0.0",
+  "description": "Gyrometer module for beaglebone and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/timbit123/ITG3200.git"
+  },
+  "dependencies": {
+   "i2c" : "*",
+   "async" : "*"
+  },
+  "keywords": [
+    "itg3200",
+    "nodejs",
+    "beagleboard"
+  ],
+  "author": "Timothé Fillion Brunet",
+  "license": "BSD"
+}
