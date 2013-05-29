@@ -163,6 +163,7 @@ ITG3200.prototype.measureGyro = function(callback) {
 
 ITG3200.prototype.measureGyroSum = function(callback) {
 	//get values from sensor here
+	var self = this;
 	this.wire.readBytes(ITG3200_MEMORY_ADDRESS, ITG3200_BUFFER_SIZE, function(err, res) {
 		if (!err) {
 			for (var axis = XAXIS; axis <= ZAXIS; axis++) {
