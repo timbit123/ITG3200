@@ -59,7 +59,6 @@ function ITG3200(callback) {
 	var self = this;
 	async.waterfall([
 	function(cb) {
-		console.log(self.wire);
 		self.wire.writeBytes(ITG3200_RESET_ADDRESS, [ITG3200_RESET_VALUE], function(err) {
 			cb(err);
 		});
