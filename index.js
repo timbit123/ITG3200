@@ -203,4 +203,4 @@ ITG3200.prototype.evaluateGyroRate = function() {
 	callback();
 }
 
-module.exports = classITG3200;
+module.exports = ITG3200;
