@@ -200,8 +200,6 @@ ITG3200.prototype.evaluateGyroRate = function() {
 		this.gyroHeading += this.gyroRate[ZAXIS] * ((currentTime - this.gyroLastMesuredTime) / 1000000.0);
 	}
 	this.gyroLastMesuredTime = currentTime;
-
-	callback();
 }
 
 module.exports = ITG3200;
